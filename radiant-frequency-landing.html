@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Radiant Frequency — Strategic Karma for a Life of Abundance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #faf7f2;
+      --dark: #1a1814;
+      --muted: #7a7268;
+      --gold: #b8883c;
+      --gold-light: #f5ead4;
+      --gold-dark: #8a6020;
+      --border: #e8e0d0;
+      --white: #fff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,247,242,0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px; height: 62px;
+    }
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px; font-weight: 700;
+      letter-spacing: 0.05em; color: var(--dark);
+      text-decoration: none;
+    }
+    .nav-brand span { color: var(--gold); }
+    .nav-btn {
+      font-size: 13px; font-weight: 500;
+      background: var(--dark); color: var(--white);
+      padding: 9px 22px; border-radius: 100px;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .nav-btn:hover { background: var(--gold-dark); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 130px 32px 90px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(184,136,60,0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold-dark);
+      border: 1px solid var(--gold);
+      padding: 6px 18px; border-radius: 100px;
+      margin-bottom: 28px;
+      opacity: 0; animation: fadeUp 0.6s ease 0.1s forwards;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 7vw, 78px);
+      font-weight: 700; line-height: 1.05;
+      color: var(--dark); max-width: 760px;
+      margin-bottom: 12px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.2s forwards;
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(17px, 2.5vw, 22px);
+      font-style: italic; color: var(--muted);
+      margin-bottom: 36px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.3s forwards;
+    }
+    .hero-hook {
+      font-size: clamp(15px, 2vw, 18px);
+      font-weight: 300; color: var(--muted);
+      max-width: 520px; line-height: 1.8;
+      margin-bottom: 48px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.4s forwards;
+    }
+    .hero-hook strong { color: var(--dark); font-weight: 500; }
+    .hero-cta-group {
+      display: flex; flex-direction: column; align-items: center; gap: 14px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.5s forwards;
+    }
+    .btn-main {
+      display: inline-block;
+      background: var(--dark); color: var(--white);
+      font-size: 15px; font-weight: 500;
+      padding: 18px 52px; border-radius: 6px;
+      text-decoration: none; border: none; cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(26,24,20,0.15);
+    }
+    .btn-main:hover { background: #2e2b25; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(26,24,20,0.2); }
+    .hero-note { font-size: 13px; color: var(--muted); }
+    .hero-note::before { content: '✦  '; color: var(--gold); font-size: 10px; }
+
+    /* DIVIDER */
+    .divider {
+      display: flex; align-items: center; gap: 16px;
+      max-width: 480px; margin: 0 auto 0;
+      padding: 0 32px;
+    }
+    .divider hr { flex: 1; border: none; border-top: 1px solid var(--border); }
+    .divider span { font-size: 11px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; }
+
+    /* PAIN */
+    .pain-section {
+      padding: 80px 32px;
+      max-width: 680px; margin: 0 auto;
+      text-align: center;
+    }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 20px; }
+    .pain-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 600; line-height: 1.2;
+      color: var(--dark); margin-bottom: 24px;
+    }
+    .pain-title em { font-style: italic; }
+    .pain-body { font-size: 17px; font-weight: 300; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+    .pain-body strong { color: var(--dark); font-weight: 500; }
+
+    /* QUOTE */
+    .quote-block {
+      background: var(--gold-light);
+      border-left: 3px solid var(--gold);
+      padding: 28px 36px;
+      margin: 48px auto;
+      max-width: 600px;
+      border-radius: 0 8px 8px 0;
+    }
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-style: italic; font-weight: 600;
+      color: var(--dark); line-height: 1.4;
+    }
+    .quote-author { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dark); margin-top: 12px; }
+
+    /* INSIDE */
+    .inside-section { padding: 80px 32px; background: var(--dark); }
+    .inside-inner { max-width: 920px; margin: 0 auto; }
+    .inside-header { text-align: center; margin-bottom: 52px; }
+    .inside-label { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .inside-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 600; color: var(--white); line-height: 1.2;
+    }
+    .inside-title em { font-style: italic; color: var(--gold); }
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+    .chapter-item {
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: background 0.2s;
+    }
+    .chapter-item:hover { background: rgba(184,136,60,0.09); }
+    .chapter-num { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .chapter-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 8px; line-height: 1.2; }
+    .chapter-desc { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.42); line-height: 1.6; }
+    .bonus-chip {
+      display: inline-block;
+      background: var(--gold); color: var(--dark);
+      font-size: 10px; font-weight: 500;
+      padding: 3px 10px; border-radius: 100px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* FOR YOU */
+    .foryou-section { padding: 80px 32px; max-width: 700px; margin: 0 auto; }
+    .foryou-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 600; line-height: 1.2;
+      text-align: center; margin-bottom: 40px;
+    }
+    .foryou-title em { font-style: italic; color: var(--gold); }
+    .foryou-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .foryou-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 22px 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color 0.2s;
+    }
+    .foryou-item:hover { border-color: var(--gold); }
+    .foryou-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+    .foryou-text { font-size: 15px; color: var(--muted); line-height: 1.65; }
+    .foryou-text strong { color: var(--dark); font-weight: 500; }
+
+    /* CHECKOUT */
+    .checkout-section { padding: 80px 32px 100px; }
+    .checkout-card {
+      max-width: 500px; margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px 44px;
+      text-align: center;
+      box-shadow: 0 8px 48px rgba(26,24,20,0.07);
+    }
+    .checkout-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 14px; }
+    .checkout-title { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+    .checkout-sub { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+    .price-row { display: flex; align-items: baseline; justify-content: center; gap: 12px; margin-bottom: 8px; }
+    .price-main { font-family: 'Cormorant Garamond', serif; font-size: 54px; font-weight: 700; color: var(--dark); line-height: 1; }
+    .price-old { font-size: 20px; color: var(--muted); text-decoration: line-through; }
+    .price-save { display: inline-block; background: #fde8ce; color: #9a4e10; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 100px; margin-bottom: 28px; }
+    .checkout-includes { list-style: none; text-align: left; margin-bottom: 28px; display: flex; flex-direction: column; gap: 12px; }
+    .checkout-includes li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .check { width: 20px; height: 20px; min-width: 20px; background: var(--gold-light); color: var(--gold-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; }
+    .btn-checkout {
+      display: block; width: 100%;
+      background: var(--dark); color: var(--white);
+      font-size: 16px; font-weight: 500;
+      padding: 20px 32px; border-radius: 8px;
+      text-decoration: none; border: none; cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(26,24,20,0.15);
+      margin-bottom: 16px;
+    }
+    .btn-checkout:hover { background: #2e2b25; transform: translateY(-2px); }
+    .checkout-guarantee { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .checkout-guarantee span { color: var(--gold-dark); }
+
+    /* FINAL */
+    .final-section { padding: 80px 32px 100px; text-align: center; background: var(--dark); }
+    .final-star { color: var(--gold); font-size: 20px; margin-bottom: 24px; letter-spacing: 10px; }
+    .final-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 5vw, 52px);
+      font-weight: 600; font-style: italic;
+      color: var(--white); max-width: 580px;
+      margin: 0 auto 20px; line-height: 1.2;
+    }
+    .final-title em { color: var(--gold); font-style: normal; }
+    .final-sub { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.45); max-width: 440px; margin: 0 auto 40px; line-height: 1.75; }
+
+    /* FOOTER */
+    footer { padding: 28px 32px; border-top: 1px solid var(--border); text-align: center; }
+    .footer-text { font-size: 12px; color: var(--muted); }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 700; color: var(--dark); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 100px 20px 64px; }
+      .pain-section, .foryou-section { padding: 60px 20px; }
+      .inside-section { padding: 60px 20px; }
+      .checkout-card { padding: 32px 20px; }
+      .checkout-section { padding: 60px 20px 80px; }
+      .final-section { padding: 60px 20px 80px; }
+      .quote-block { padding: 22px 20px; margin: 36px 20px; }
+      .chapters-grid { grid-template-columns: 1fr; }
+      .divider { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">✦ <span>The Radiant</span> Frequency</a>
+  <a class="nav-btn" href="#checkout">Kunin Na — ₱___</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Digital Guide · Intentional Living</div>
+  <h1 class="hero-title">Hindi ito tungkol sa <em>swerte.</em><br>Ito ay tungkol sa kung sino ka.</h1>
+  <p class="hero-subtitle">Mastering the Art of Strategic Karma for a Life of Abundance</p>
+  <p class="hero-hook">
+    Nagsumikap ka na. Nag-visualize. Naniwala. Pero parang may <strong>invisible wall</strong> pa rin na hindi mo ma-explain.
+    Hindi ka tamad — <strong>kulang lang ang isang piraso.</strong>
+  </p>
+  <div class="hero-cta-group">
+    <a href="#checkout" class="btn-main">Gusto Ko Na Ito →</a>
+    <span class="hero-note">Instant digital download · PDF format</span>
+  </div>
+</section>
+
+<div class="divider" style="margin-top:0; padding-top:0;">
+  <hr/><span>Kung paano ito nagsisimula</span><hr/>
+</div>
+
+<!-- PAIN -->
+<section class="pain-section">
+  <p class="section-label reveal">Kilala mo ba ang feeling na ito?</p>
+  <h2 class="pain-title reveal">Parang lagi kang <em>almost there</em> — pero hindi pa rin fully nag-a-align.</h2>
+  <p class="pain-body reveal">May mga taong parang <strong>smooth ang flow ng lahat</strong> — hindi naman sila mas matalino o mas magaling. Pero lagi silang nasa tamang lugar sa tamang oras.</p>
+  <p class="pain-body reveal">Ang pagkakaiba? Hindi luck. <strong>Ang enerhiya nila ay naka-tune sa abundance.</strong> Ang karma nila ay gumagawa para sa kanila — hindi laban sa kanila.</p>
+  <p class="pain-body reveal">The Radiant Frequency ay hindi isa pang manifestation book. Ito ang <strong>missing piece</strong> na madalas hindi pinag-uusapan.</p>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-block reveal" style="margin: 0 auto 80px;">
+  <p class="quote-text">"Hindi ang swerte ang pumipili sa iyo. Ikaw ang gumagawa ng environment kung saan pwede siyang pumasok."</p>
+  <p class="quote-author">✦ The Radiant Frequency</p>
+</div>
+
+<!-- INSIDE -->
+<section class="inside-section">
+  <div class="inside-inner">
+    <div class="inside-header">
+      <p class="inside-label">Ang laman ng guide</p>
+      <h2 class="inside-title">10 chapters + <em>bonus challenge</em><br>na magbabago ng perspective mo</h2>
+    </div>
+    <div class="chapters-grid">
+      <div class="chapter-item">
+        <p class="chapter-num">Chapter 01</p>
+        <p class="chapter-name">Ang Iyong Cosmic Signature</p>
+        <p class="chapter-desc">Anong signal ang pinapadala mo araw-araw — nang hindi mo nalalaman.</p>
+      </div>
+      <div class="chapter-item">
+        <p class="chapter-num">Chapter 02</p>
+        <p class="chapter-name">Radical Forgiveness</p>
+        <p class="chapter-desc">Ang pagpapatawad ay hindi para sa kanila. Para sa'yo ito — at sa energy mo.</p>
+      </div>
+      <div class="chapter-item">
+        <p class="chapter-num">Chapter 03</p>
+        <p class="chapter-name">Ang Purity Protocol</p>
+        <p class="chapter-desc">Mas mahalaga ang "bakit" kaysa sa "ano." Dito nagkakaiba ang resulta.</p>
+      </div>
+      <div class="chapter-item">
+        <p class="chapter-num">Chapter 04</p>
+        <p class="chapter-name">Ang Karmic Audit</p>
+        <p class="chapter-desc">Hanapin ang mga energy leaks sa iyong buhay bago pa magsimula ang swerte.</p>
+      </div>
+      <div class="chapter-item">
+        <p class="chapter-num">Chapter 05</p>
+        <p class="chapter-name">Daily Maintenance</p>
+        <p class="chapter-desc">Simpleng gawi — pero consistent. Ito ang nagtatayo ng malakas na karma over time.</p>
+      </div>
+      <div class="chapter-item">
+        <p class="chapter-num">Chapter 06</p>
+        <p class="chapter-name">Karma in Money & Success</p>
+        <p class="chapter-desc">Ang lihim kung bakit may taong lagi nang may pera — kahit parang hindi sila nagsisikap.</p>
+      </div>
+      <div class="chapter-item">
+        <p class="chapter-num">Chapter 07</p>
+        <p class="chapter-name">Karmic Patterns sa Relationships</p>
+        <p class="chapter-desc">Kung lagi kang nasasabak sa parehong problema — may pattern ito na kailangan harapin.</p>
+      </div>
+      <div class="chapter-item">
+        <p class="chapter-num">Chapter 08 · 09 · 10</p>
+        <p class="chapter-name">Forgiveness, Designing & Resetting</p>
+        <p class="chapter-desc">Hindi mo binabayaran ang karma. Pinapalitan mo ang pattern — simula ngayon.</p>
+      </div>
+      <div class="chapter-item" style="grid-column: 1 / -1; background: rgba(184,136,60,0.06);">
+        <div class="bonus-chip">Bonus</div>
+        <p class="chapter-name">21-Day Karmic Magnet Challenge</p>
+        <p class="chapter-desc">3 simple actions. Araw-araw. Sa loob ng 21 days. Watch what changes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR YOU -->
+<section class="foryou-section">
+  <h2 class="foryou-title reveal">Para ito sa'yo <em>kung…</em></h2>
+  <ul class="foryou-list">
+    <li class="foryou-item reveal">
+      <span class="foryou-icon">🌀</span>
+      <p class="foryou-text"><strong>Nagsumikap ka na — pero parang hindi pa rin enough.</strong> May ginagawa ka, pero may kulang pa rin na hindi mo matukoy.</p>
+    </li>
+    <li class="foryou-item reveal">
+      <span class="foryou-icon">💸</span>
+      <p class="foryou-text"><strong>Gusto mong i-improve ang relasyon mo sa pera.</strong> Hindi lang kumita — kundi ang pag-akit ng tamang opportunities at flow.</p>
+    </li>
+    <li class="foryou-item reveal">
+      <span class="foryou-icon">🔁</span>
+      <p class="foryou-text"><strong>Paulit-ulit kang nasasabak sa parehong sitwasyon.</strong> Ibang tao, ibang oras — pero same sakit. Gusto mong putulin na ang cycle.</p>
+    </li>
+    <li class="foryou-item reveal">
+      <span class="foryou-icon">🌱</span>
+      <p class="foryou-text"><strong>Handa ka na talagang mag-shift.</strong> Hindi pang-motivate — gusto mo ng practical na gagawin mo simula bukas.</p>
+    </li>
+  </ul>
+</section>
+
+<!-- CHECKOUT -->
+<section class="checkout-section" id="checkout">
+  <div class="checkout-card reveal">
+    <p class="checkout-eyebrow">✦ Limited Offer</p>
+    <h2 class="checkout-title">The Radiant Frequency</h2>
+    <p class="checkout-sub">Digital Guide — Instant Download · PDF</p>
+    <div class="price-row">
+      <span class="price-old">₱___</span>
+      <span class="price-main">₱___</span>
+    </div>
+    <p class="price-save">Makatipid ng ₱___ ngayon</p>
+    <ul class="checkout-includes">
+      <li><span class="check">✓</span>The Radiant Frequency — Full 10-Chapter Guide (PDF)</li>
+      <li><span class="check">✓</span>21-Day Karmic Magnet Challenge (Bonus)</li>
+      <li><span class="check">✓</span>Instant digital access pagkatapos ng payment</li>
+      <li><span class="check">✓</span>Para basahin kahit saan — phone, tablet, laptop</li>
+    </ul>
+    <a href="#" class="btn-checkout">Kunin Na — Mag-order →</a>
+    <p class="checkout-guarantee">
+      <span>✦ Secure payment</span> · Digital product — walang shipping fee ·
+      Matatanggap mo agad pagkatapos mag-bayad.
+    </p>
+  </div>
+</section>
+
+<!-- FINAL HOOK -->
+<section class="final-section">
+  <p class="final-star">✦ ✦ ✦</p>
+  <h2 class="final-title">"Kapag inayos mo ang <em>energy</em> mo — sumusunod na ang lahat."</h2>
+  <p class="final-sub">Hindi ka naghihintay ng swerte. Ikaw ang gumagawa ng environment kung saan pwedeng pumasok ang swerte.</p>
+  <a href="#checkout" class="btn-main">Simulan Na Natin →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-text"><span class="footer-brand">The Radiant Frequency</span> · All Rights Reserved · Digital Product</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
